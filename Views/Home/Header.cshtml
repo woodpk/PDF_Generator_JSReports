@@ -1,0 +1,136 @@
+﻿<!--header template content-->
+<html>
+<head>
+    <style>
+        /* defining explicit font-size solves the scaling issue */
+        html, body {
+            font-size: 12px;
+        }
+
+.billing-header-grid-container {
+    display: grid;
+	width: 90vw;
+	position: center;
+	top: 0in;
+	/*margin: auto;*/ 
+	border-bottom: 5px solid #FF00FF; 
+    grid-template-columns: repeat(9, 1fr);
+	column-gap: 0;
+    grid-template-rows: 15px 15px 15px 15px 15px;
+    grid-template-areas: 
+      "pic typ         typ        typ         typ        typ       typ       typ      typ"
+      "pic clabel      clabel     clabel      cdat       cdat      cdat      cdat     cdat"
+      "pic srvlabel    srvlabel   srvlabel    srvdat     srvdat    srvdat    srvdat   srvdat"
+	  "pic datelabel   datelabel  datelabel   datedat    datedat   datedat   datedat  datedat" 
+      " .  .           .          .           .          .         .         pages    pages";
+}
+
+
+.grid-header-logo {
+    grid-area: pic;
+	background-color: orange;
+	grid-auto-columns: 5%;
+}
+.report-type-name {
+    grid-area: typ;
+	background-color: aqua;
+	text-align: center;
+	font-weight	: bold;
+	/*padding: 1px;*/
+}
+.grid-label-csr {
+    grid-area: clabel;
+	background-color: green;
+	text-align: right;
+	font-weight	: bold;
+	/*padding: 1px;*/
+}
+.grid-label-service {
+    grid-area: srvlabel;
+	background-color: green;
+	text-align: right;
+	font-weight	: bold;
+	/*padding: 1px;*/
+}
+.grid-label-date-location {
+    grid-area: datelabel;
+	background-color: green;
+	text-align: right;
+	font-weight	: bold;
+	/*padding: 1px;*/
+}
+.data-csr {
+    grid-area: cdat;
+	background-color: green;
+	/*padding: 1px;*/
+}
+.data-service {
+    grid-area: srvdat;
+	background-color: green;
+	/*padding: 1px;*/
+}
+
+.data-date-location {
+    grid-area: datedat;
+	background-color: green;
+	/*padding: 1px;*/
+}
+.label-pageNumbers {
+    grid-area: pages;
+	background-color: green;
+	/*padding: 1px;*/
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <div class="billing-header-grid-container">
+
+
+        <div class="grid-header-logo">
+            <div>
+                <img src="image001.png" style="width: 101px; height:
+							123px; display: block; margin-right: auto;">
+            </div>
+        </div>
+
+        <div class="report-type-name">
+            <div> PROGRESS NOTE</div>
+        </div>
+
+        <div class="grid-label-csr">
+            <div> CONSUMER: &nbsp&nbsp </div>
+        </div>
+        <div class="grid-label-service">
+            <div> SERVICE SUMMARY: &nbsp&nbsp </div>
+        </div>
+        <div class="grid-label-date-location">
+            <div> DATE / TIME / LOCATION: &nbsp&nbsp </div>
+        </div>
+
+
+
+        <div class="data-csr">
+            <div> John Doe Maybe </div>
+        </div>
+        <div class="data-service">
+            <div> Individual Counseling :: 90837 :: U3 U6 </div>
+        </div>
+        <div class="data-date-location">
+            <div> 05-07-2019 :: 03:00 PM -- 04:00 PM :: @@  OFFICE </div>
+        </div>
+        <div class="label-pageNumbers"> Page&nbsp;<span class="pageNumber"></span>&nbsp;of&nbsp;<span class="totalPages"></span> </div>
+
+    </div>
+    <div class='spacer'></div>
+
+
+
+</body>
+</html>
