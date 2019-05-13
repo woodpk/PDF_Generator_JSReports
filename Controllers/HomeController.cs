@@ -47,7 +47,7 @@ namespace WebApp.Controllers
                 .Configure((r) => r.Template.Chrome = new Chrome {
                     HeaderTemplate = header,
                     DisplayHeaderFooter = true,
-                    MarginTop = "5cm",
+                    MarginTop = "3.5cm",
                     MarginLeft = "1cm",
                     MarginBottom = "1cm",
                     MarginRight = "1cm"
